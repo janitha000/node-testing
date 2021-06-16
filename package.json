@@ -8,6 +8,11 @@
     "start": "node -r esm index.js",
     "dev": "nodemon -r esm index.js"
   },
+  "jest": {
+    "transform": {
+      ".js": "jest-esm-transformer"
+    }
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -17,6 +22,8 @@
   },
   "devDependencies": {
     "jest": "^27.0.4",
-    "nodemon": "^2.0.7"
+    "jest-esm-transformer": "^1.0.0",
+    "nodemon": "^2.0.7",
+    "sinon": "^11.1.1"
   }
 }

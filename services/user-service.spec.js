@@ -1,6 +1,19 @@
-import { expect } from "@jest/globals";
-import { describe } from "yargs";
+import { expect } from '@jest/globals'
+import user from '../services/user-service'
+
+const users = [
+    {
+        name: "Jantiha",
+        age: 30
+    },
+    {
+        name: "Vindya",
+        age: 29
+    }
+]
 
 describe('user-service', () => {
-    expect(1 + 1).toEqual(2)
+    it('should return correct valuues for user ', () => {
+        expect(user.users()).toEqual(users)
+    })
 })
