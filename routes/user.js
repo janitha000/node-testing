@@ -3,7 +3,12 @@ import user from '../services/user-service'
 const router = express.Router()
 
 router.get('/', (req, res, next) => {
-    res.send(user.getUsers())
+    try {
+        res.send(user.getUsers())
+    }
+    catch (err) {
+        res.status(500).send("ERROR")
+    }
 })
 
 router.get('/:name', (req, res, next) => {
