@@ -12,7 +12,8 @@ export const startApolloServer = async (app) => {
             return {
                 userAPI: new UserAPI()
             }
-        }
+        },
+        tracing: true
     });
     await server.start();
 

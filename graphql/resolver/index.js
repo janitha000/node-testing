@@ -6,7 +6,7 @@ const resolvers = {
         users: (_, __, { dataSources }) => {
             return dataSources.userAPI.getUsers()
         },
-        userByName: (_, { name }, { dataSources }) => {
+        userByName: (_, { name }, { dataSources }, info) => {
             return dataSources.userAPI.getUserByName(name)
         }
     },
